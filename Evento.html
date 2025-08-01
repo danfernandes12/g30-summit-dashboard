@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard G30 Summit Campinas 2025</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+        .card {
+            background-color: #2d3748; /* Darker card background */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #f56565, #f6e05e); /* Red to yellow gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background-color: #e53e3e; /* Red */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #c53030; /* Darker red on hover */
+        }
+        .grid-container {
+            display: grid;
+            gap: 1.5rem; /* gap-6 */
+            grid-template-columns: repeat(1, minmax(0, 1fr)); /* Default to 1 column */
+        }
+        @media (min-width: 640px) { /* sm */
+            .grid-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns on small screens */
+            }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .grid-container {
+                grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns on large screens */
+            }
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 lg:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header Section -->
+        <header class="text-center mb-10 p-6 bg-red-700 rounded-xl shadow-lg">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-2">
+                G30 SUMMIT CAMPINAS 2025
+            </h1>
+            <p class="text-xl sm:text-2xl text-white font-medium">
+                1ª EDIÇÃO
+            </p>
+            <p class="text-lg sm:text-xl text-white mt-4">
+                Imersão para donos de lojas de veículos e gestores de concessionárias
+            </p>
+        </header>
+
+        <!-- Main Dashboard Grid -->
+        <div class="grid-container">
+
+            <!-- Card: O que é o G30? -->
+            <div class="card col-span-1 lg:col-span-2">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">O que é o G30?</h2>
+                <p class="text-md mb-4">
+                    A **MAIOR IMERSÃO DO MERCADO AUTOMOTIVO PARA LOJISTAS DE VEÍCULOS SEMINOVOS**.
+                    Nosso foco é transformar seu negócio através de conhecimento e ferramentas essenciais.
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                    <li><strong class="text-red-400">GESTÃO:</strong> Estrutura de time de sucesso, indicadores de performance, F&I, pós-venda.</li>
+                    <li><strong class="text-yellow-400">VENDAS:</strong> Estratégias e técnicas para maximizar seus resultados.</li>
+                    <li><strong class="text-blue-400">INTELIGÊNCIA ARTIFICIAL:</strong> Aplicações práticas da IA focada na loja de veículos.</li>
+                    <li>... e muito mais!</li>
+                </ul>
+            </div>
+
+            <!-- Card: Atmosfera dos Eventos (Video Embed) -->
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Atmosfera dos Nossos Eventos</h2>
+                <div class="relative w-full pb-[56.25%] rounded-lg overflow-hidden shadow-lg">
+                    <!-- 16:9 Aspect Ratio for responsive video -->
+                    <!-- Note: Instagram embeds can be complex. A direct iframe might not always work perfectly. -->
+                    <!-- For best results, Instagram often requires their specific embed code (blockquote + script). -->
+                    <!-- This iframe attempts a direct embed using the reel ID. -->
+                    <iframe id="eventVideo" class="absolute inset-0 w-full h-full" src="https://www.instagram.com/reel/C_mTTIAMII7/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="text-sm mt-4 text-center text-gray-400">
+                    Assista ao vídeo da Imersão G30 para sentir a atmosfera dos nossos eventos.
+                </p>
+            </div>
+
+            <!-- Card: Por onde já passamos -->
+            <div class="card col-span-1 lg:col-span-2">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Por onde a Imersão G30 já passou</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <p class="font-semibold text-red-300">João Pessoa</p>
+                        <p>Abril/2023 (Imersão G30 VIP DAY)</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-red-300">Campinas/SP</p>
+                        <p>Outubro/2023 (Imersão G30)</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-red-300">São Paulo</p>
+                        <p>Maio/2023 (Imersão G30)</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-red-300">São Paulo</p>
+                        <p>Abril/2024 (Imersão G30)</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-red-300">Florianópolis</p>
+                        <p>Agosto/2023 (Imersão G30)</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-red-300">São Paulo</p>
+                        <p>Setembro/2024 (Imersão G30)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Big Numbers Imersões 2024 -->
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Big Numbers Imersões 2024</h2>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-4xl font-extrabold text-red-400">+1000</p>
+                        <p class="text-sm text-gray-300">Donos de lojas de veículos seminovos reunidos</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-yellow-400">+20</p>
+                        <p class="text-sm text-gray-300">Estados diferentes (Lojistas de quase todo Brasil)</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl font-extrabold text-blue-400">+R$291 MILHÕES</p>
+                        <p class="text-sm text-gray-300">Média mensal de movimentação financeira dos lojistas que estiveram no evento</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Especialistas que estiveram nos eventos -->
+            <div class="card col-span-1 lg:col-span-3">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Especialistas que estiveram nos eventos</h2>
+                <div class="w-full rounded-lg overflow-hidden shadow-lg">
+                    <!-- Image of Specialists -->
+                    <img src="http://googleusercontent.com/file_content/1" alt="Especialistas que estiveram nos eventos G30 Summit" class="w-full h-auto object-cover">
+                </div>
+                <p class="text-sm mt-4 text-center text-gray-400">
+                    Conheça os especialistas que contribuíram para o sucesso dos nossos eventos.
+                </p>
+            </div>
+
+            <!-- Card: Empresas que já aceleraram conosco -->
+            <div class="card col-span-1 lg:col-span-2">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Empresas que já aceleraram conosco</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-center justify-center">
+                    <!-- Placeholder for logos - ideally, you'd replace these with actual company logos -->
+                    <img src="https://placehold.co/120x60/444/fff?text=BANCO+PAN" alt="Banco Pan" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=Santander" alt="Santander" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=C6+BANK" alt="C6 Bank" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=gestauto" alt="gestauto" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=MOBIAUTO" alt="MOBIAUTO" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=AUTO+AVALIAR" alt="AUTO AVALIAR" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=autoconf" alt="autoconf" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=ecosys+auto" alt="ecosys auto" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=too+seguros" alt=",too seguros" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=credere" alt="credere" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=bwa+global" alt="bwa global" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=SIMPLE+DEALERS" alt="SIMPLE DEALERS TECNOLOGIA" class="h-12 object-contain mx-auto">
+                    <img src="https://placehold.co/120x60/444/fff?text=REICHE" alt="REICHE CONSULTORIA" class="h-12 object-contain mx-auto">
+                </div>
+            </div>
+
+            <!-- Card: Mapa do Evento G30 SUMMIT 2025 -->
+            <div class="card">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Mapa do Local do Evento</h2>
+                <img src="https://placehold.co/600x400/333/fff?text=Mapa+do+Evento" alt="Mapa do Local do Evento G30 Summit 2025" class="w-full h-auto rounded-lg shadow-lg mb-4">
+                <p class="text-sm text-gray-400">
+                    Visualize a disposição dos estandes, a Arena G30, lanchonete e credenciamento.
+                </p>
+            </div>
+
+            <!-- Card: Observações Importantes -->
+            <div class="card col-span-1 lg:col-span-3">
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Observações Importantes</h2>
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                    <li>As artes para impressão dos adesivos do banner e qualquer outro material precisam ser fornecidas pelo patrocinador.</li>
+                    <li>Acesso à Internet, ponto de energia e demais necessidades no estande (com exceção da montagem e adesivagem) são responsabilidade do patrocinador.</li>
+                    <li>A reserva da cota é feita após assinatura do contrato de patrocínio e pagamento da cota. A prioridade na escolha do local do estande acontecerá por ordem de assinatura do contrato.</li>
+                    <li>Após a assinatura do contrato, o logo do apoiador entra nas divulgações do evento, que seguirão o planejamento de divulgação interno da G30.</li>
+                    <li>Para informações sobre cotas e detalhes do evento, favor falar com <strong class="text-red-300">Guga Gadelha</strong>.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Download Section (Simulated) -->
+        <div class="text-center mt-10 p-6 bg-gray-800 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-4 text-white">Baixe o Mídia Kit Completo</h2>
+            <p class="text-lg text-gray-300 mb-6">
+                Clique no botão abaixo para simular o download do Mídia Kit em formato de apresentação.
+                (Por favor, note que esta é uma funcionalidade simulada, pois não posso gerar arquivos para download diretamente.)
+            </p>
+            <a href="#" class="btn-primary inline-block" onclick="alert('Funcionalidade de download simulada! Você pode copiar o conteúdo desta página para criar seu próprio arquivo.')">
+                Baixar Apresentação
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
