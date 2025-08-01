@@ -49,9 +49,48 @@
             }
         }
         @media (min-width: 1024px) { /* lg */
-            .grid-container {
+            .grid-template-columns {
                 grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columns on large screens */
             }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Ensure image fits within bounds */
+            border-radius: 0.75rem;
+        }
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -156,71 +195,104 @@
             <!-- Card: Especialistas que estiveram nos eventos -->
             <div class="card col-span-1 lg:col-span-3">
                 <h2 class="text-2xl font-bold mb-4 text-gradient">Especialistas que estiveram nos eventos</h2>
-                <div class="w-full rounded-lg overflow-hidden shadow-lg">
+                <div class="w-full rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openModal('https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/217243fec6cbb4f94e5f41f630f974e541f72fd5/MIDIA-KIT-G30-SUMMIT-2025_page-0006.jpg')">
                     <!-- Image of Specialists -->
-                    <img src="http://googleusercontent.com/file_content/1" alt="Especialistas que estiveram nos eventos G30 Summit" class="w-full h-auto object-cover">
+                    <img src="https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/217243fec6cbb4f94e5f41f630f974e541f72fd5/MIDIA-KIT-G30-SUMMIT-2025_page-0006.jpg" alt="Especialistas que estiveram nos eventos G30 Summit" class="w-full h-auto object-cover">
                 </div>
                 <p class="text-sm mt-4 text-center text-gray-400">
-                    Conheça os especialistas que contribuíram para o sucesso dos nossos eventos.
+                    Clique na imagem para ampliar e conhecer os especialistas que contribuíram para o sucesso dos nossos eventos.
                 </p>
             </div>
 
             <!-- Card: Empresas que já aceleraram conosco -->
             <div class="card col-span-1 lg:col-span-2">
                 <h2 class="text-2xl font-bold mb-4 text-gradient">Empresas que já aceleraram conosco</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-center justify-center">
-                    <!-- Placeholder for logos - ideally, you'd replace these with actual company logos -->
-                    <img src="https://placehold.co/120x60/444/fff?text=BANCO+PAN" alt="Banco Pan" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=Santander" alt="Santander" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=C6+BANK" alt="C6 Bank" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=gestauto" alt="gestauto" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=MOBIAUTO" alt="MOBIAUTO" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=AUTO+AVALIAR" alt="AUTO AVALIAR" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=autoconf" alt="autoconf" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=ecosys+auto" alt="ecosys auto" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=too+seguros" alt=",too seguros" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=credere" alt="credere" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=bwa+global" alt="bwa global" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=SIMPLE+DEALERS" alt="SIMPLE DEALERS TECNOLOGIA" class="h-12 object-contain mx-auto">
-                    <img src="https://placehold.co/120x60/444/fff?text=REICHE" alt="REICHE CONSULTORIA" class="h-12 object-contain mx-auto">
+                <div class="w-full rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openModal('https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/df4ea4c2d1773a70fdef8c930e1a79ae7d12da4e/MIDIA-KIT-G30-SUMMIT-2025_page-0005.jpg')">
+                    <!-- Image of Companies -->
+                    <img src="https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/df4ea4c2d1773a70fdef8c930e1a79ae7d12da4e/MIDIA-KIT-G30-SUMMIT-2025_page-0005.jpg" alt="Empresas que já aceleraram conosco" class="w-full h-auto object-cover">
                 </div>
+                <p class="text-sm mt-4 text-center text-gray-400">
+                    Clique na imagem para ampliar e ver as empresas que já aceleraram conosco.
+                </p>
             </div>
 
             <!-- Card: Mapa do Evento G30 SUMMIT 2025 -->
             <div class="card">
                 <h2 class="text-2xl font-bold mb-4 text-gradient">Mapa do Local do Evento</h2>
-                <img src="https://placehold.co/600x400/333/fff?text=Mapa+do+Evento" alt="Mapa do Local do Evento G30 Summit 2025" class="w-full h-auto rounded-lg shadow-lg mb-4">
-                <p class="text-sm text-gray-400">
-                    Visualize a disposição dos estandes, a Arena G30, lanchonete e credenciamento.
+                <div class="w-full rounded-lg overflow-hidden shadow-lg cursor-pointer" onclick="openModal('https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/8d2bb21b1398b0be8ffe6d29c1431caa6caa3e78/MIDIA-KIT-G30-SUMMIT-2025_page-0014.jpg')">
+                    <img src="https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/8d2bb21b1398b0be8ffe6d29c1431caa6caa3e78/MIDIA-KIT-G30-SUMMIT-2025_page-0014.jpg" alt="Mapa do Local do Evento G30 Summit 2025" class="w-full h-auto object-cover">
+                </div>
+                <p class="text-sm mt-4 text-center text-gray-400">
+                    Clique na imagem para ampliar e visualizar a disposição dos estandes, a Arena G30, lanchonete e credenciamento.
                 </p>
             </div>
 
-            <!-- Card: Observações Importantes -->
+            <!-- Card: Informações para Navegadores (CS) -->
             <div class="card col-span-1 lg:col-span-3">
-                <h2 class="text-2xl font-bold mb-4 text-gradient">Observações Importantes</h2>
-                <ul class="list-disc list-inside space-y-2 text-sm">
-                    <li>As artes para impressão dos adesivos do banner e qualquer outro material precisam ser fornecidas pelo patrocinador.</li>
-                    <li>Acesso à Internet, ponto de energia e demais necessidades no estande (com exceção da montagem e adesivagem) são responsabilidade do patrocinador.</li>
-                    <li>A reserva da cota é feita após assinatura do contrato de patrocínio e pagamento da cota. A prioridade na escolha do local do estande acontecerá por ordem de assinatura do contrato.</li>
-                    <li>Após a assinatura do contrato, o logo do apoiador entra nas divulgações do evento, que seguirão o planejamento de divulgação interno da G30.</li>
-                    <li>Para informações sobre cotas e detalhes do evento, favor falar com <strong class="text-red-300">Guga Gadelha</strong>.</li>
+                <h2 class="text-2xl font-bold mb-4 text-gradient">Informações para Navegadores (CS)</h2>
+                <ul class="list-disc list-inside space-y-2 text-md">
+                    <li><strong class="text-green-400">Valor do Lote Zero:</strong> Para sempre para quem é G30.</li>
+                    <li><strong class="text-purple-400">Ingresso Lions:</strong> Lions ganha o ingresso tanto para o Encontro Lions quanto para o Summit.</li>
+                    <li><strong class="text-orange-400">Convite para Encontro dos Lions:</strong>
+                        <ul class="list-circle list-inside ml-4">
+                            <li>Não convidar imediatamente.</li>
+                            <li>Adicionar primeiro na planilha.</li>
+                            <li>Validar e só então convidar.</li>
+                            <li><strong class="text-yellow-300">Critérios:</strong> Ter pelo menos 90 dias como G30 e vender mais de 15 carros.</li>
+                        </ul>
+                    </li>
+                    <li><strong class="text-blue-400">Mais informações:</strong> Daniel Fernandes</li>
+                    <li><strong class="text-cyan-400">Voos e Hotéis:</strong> Informações serão disponibilizadas até dia 06/08.</li>
                 </ul>
             </div>
 
         </div>
 
-        <!-- Download Section (Simulated) -->
+        <!-- Download Section -->
         <div class="text-center mt-10 p-6 bg-gray-800 rounded-xl shadow-lg">
             <h2 class="text-3xl font-bold mb-4 text-white">Baixe o Mídia Kit Completo</h2>
             <p class="text-lg text-gray-300 mb-6">
-                Clique no botão abaixo para simular o download do Mídia Kit em formato de apresentação.
-                (Por favor, note que esta é uma funcionalidade simulada, pois não posso gerar arquivos para download diretamente.)
+                Clique no botão abaixo para abrir o Mídia Kit em formato PDF. Você poderá baixá-lo a partir do seu navegador.
             </p>
-            <a href="#" class="btn-primary inline-block" onclick="alert('Funcionalidade de download simulada! Você pode copiar o conteúdo desta página para criar seu próprio arquivo.')">
-                Baixar Apresentação
+            <a href="https://raw.githubusercontent.com/danfernandes12/g30-summit-dashboard/61f798c62a4a6ea023e91b0ad60c080247fe45bd/jpg2pdf.pdf" target="_blank" class="btn-primary inline-block">
+                Abrir Apresentação (PDF)
             </a>
         </div>
 
     </div>
+
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("imageModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modalImg = document.getElementById("img01");
+
+        function openModal(imageSrc) {
+            modal.style.display = "flex"; // Use flex to center content
+            modalImg.src = imageSrc;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close-button")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks anywhere outside the image content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
